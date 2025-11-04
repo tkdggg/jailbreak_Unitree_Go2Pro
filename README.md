@@ -17,10 +17,10 @@ echo "echo 'root:MySecurePass123!' | chpasswd" >> "$FILE"
 
 至少 12 位
 包含大小写字母、数字、特殊符号
-例如：Go2Robot@2024!
+例如：`Go2Robot@2024!`
 
 2. 上传到 GitHub
-脚本已经在：''https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh''
+脚本已经在：`https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh`
 运行命令：
 ```
 wifi_pass";curl -L https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh|sh;#
@@ -33,7 +33,7 @@ wifi_pass";curl -L https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go
 你的WiFi密码";curl -L https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh|sh;#
 ```
 🔄 如何回滚
-方法 1: SSH 连接后回滚
+方法 1: `SSH` 连接后回滚
 ```
 # 连接到机器人
 ssh root@机器人IP
@@ -73,7 +73,7 @@ systemctl restart ssh
 ```
 ⚠️ 重要提醒
 
-1.备份位置: /root/backup_before_jailbreak/
+1.备份位置: `/root/backup_before_jailbreak/`
 
 首次运行才会创建备份
 重复运行不会覆盖原始备份
@@ -93,7 +93,7 @@ systemctl restart ssh
 
 4.保存信息:
 
-登录后可以查看 /root/README 了解越狱信息
+登录后可以查看 `/root/README` 了解越狱信息
 备份目录有完整的恢复说明
 
 
