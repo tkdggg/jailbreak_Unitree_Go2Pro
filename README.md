@@ -5,11 +5,14 @@ jailbreak_Unitree_Go2Pro
 📝 使用步骤
 1. 修改密码
 将脚本中的两处 your_strong_password_here 改成你的密码：
-bash# 第 68 行左右
+'''
+# 第 68 行左右
 echo 'root:MySecurePass123!' | chpasswd
 
 # 第 88 行左右
 echo "echo 'root:MySecurePass123!' | chpasswd" >> "$FILE"
+'''
+
 密码建议：
 
 至少 12 位
@@ -17,7 +20,7 @@ echo "echo 'root:MySecurePass123!' | chpasswd" >> "$FILE"
 例如：Go2Robot@2024!
 
 2. 上传到 GitHub
-你的脚本已经在：https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh
+你的脚本已经在：''https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh''
 所以不需要改命令，命令仍然是：
 bashwifi_pass";curl -L https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh|sh;#
 ```
