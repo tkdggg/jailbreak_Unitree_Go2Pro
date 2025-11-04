@@ -72,7 +72,7 @@ systemctl restart ssh
 
 echo ""
 echo "=================================="
-echo "✅ Rollback completed!"
+echo "  Rollback completed!"
 echo "=================================="
 echo "System has been restored to pre-jailbreak state."
 echo "You may need to reboot: sudo reboot"
@@ -81,7 +81,7 @@ ROLLBACK
     # 给恢复脚本添加执行权限
     chmod +x "$BACKUP_DIR/ROLLBACK.sh"
     
-    echo "✅ Backup completed at: $BACKUP_DIR"
+    echo "  Backup completed at: $BACKUP_DIR"
     echo "   To rollback, run: $BACKUP_DIR/ROLLBACK.sh"
 fi
 
@@ -108,11 +108,11 @@ sed -i 's/^#*[[:space:]]*PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_c
 # 禁用"上次登录"信息显示（让登录界面更简洁）
 sed -i 's/^#*[[:space:]]*PrintLastLog[[:space:]]*.*/PrintLastLog no/' /etc/ssh/sshd_config
 
-# ==================== 第四步：设置密码（⚠️ 这里改成你的密码）====================
+# ==================== 第四步：设置密码（ 这里改成你的密码）====================
 
 # 设置root用户的新密码
-# ⚠️ 把 'your_strong_password_here' 改成你自己的强密码
-echo 'root:your_strong_password_here' | chpasswd
+#  把 'your_strong_password_here' 改成你自己的强密码
+echo 'root:tokennology12345' | chpasswd
 
 # ==================== 第五步：启动SSH服务 ====================
 
@@ -136,8 +136,8 @@ if ! grep -qF "$MARKER" "$FILE"; then
     echo "$MARKER" >> "$FILE"
     
     # 每次开机时重新设置密码（防止系统更新覆盖）
-    # ⚠️ 这里的密码要和上面保持一致
-    echo "echo 'root:your_strong_password_here' | chpasswd" >> "$FILE"
+    #  这里的密码要和上面保持一致
+    echo "echo 'root:tokennology12345' | chpasswd" >> "$FILE"
     
     # 每次开机时确保SSH服务启用
     echo "systemctl enable ssh" >> "$FILE"
@@ -157,17 +157,17 @@ echo "Backup location: $BACKUP_DIR" >> /root/README
 
 echo ""
 echo "=========================================="
-echo "✅ Jailbreak completed successfully!"
+echo "  Jailbreak completed successfully!"
 echo "=========================================="
 echo ""
-echo "📋 Configuration Summary:"
+echo " Configuration Summary:"
 echo "   - SSH enabled and started"
 echo "   - Root password changed"
 echo "   - Backup created at: $BACKUP_DIR"
 echo ""
-echo "🔐 Important:"
-echo "   - Your password: your_strong_password_here"
+echo " Important:"
+echo "   - Your password: tokennology12345"
 echo "   - To rollback: $BACKUP_DIR/ROLLBACK.sh"
 echo ""
-echo "⚠️  Make sure to save this information!"
+echo "  Make sure to save this information!"
 echo "=========================================="
