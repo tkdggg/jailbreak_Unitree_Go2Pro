@@ -4,7 +4,7 @@ jailbreak_Unitree_Go2Pro
 
 📝 使用步骤
 1. 修改密码
-将脚本中的两处 your_strong_password_here 改成你的密码：
+将脚本中的两处 `your_strong_password_here` 改成你的密码：
 ```
 # 第 68 行左右
 echo 'root:MySecurePass123!' | chpasswd
